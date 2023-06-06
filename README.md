@@ -2,9 +2,12 @@
  
 # Proyecto Integrador Checking y Venta Tickets en Python
 
-![Logo](https://i.postimg.cc/CKCJYw7v/alibaba-y-los-programadores.png)
-</div>
- 
+ ![Tickets Python](https://github.com/CodeSystem2022/Alibaba_Proyecto_Tickets/assets/111541137/f223eb9f-8a5c-4aea-9777-77302b8695ae)
+
+
+
+
+
 <h2>
  El programa está desarrollado en el Lenguaje de Programación #Python, por el Grupo Alí Babá y los Programadores. Aplicando lo aprendido en la Tecnicatura Universitaria en Programación de la UTN Facultad Regional San Rafael. 
  </h2>
