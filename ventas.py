@@ -1,3 +1,6 @@
+from MostrarNoVendidas import MostrarNoVendidas
+
+
 class Ventas:
     def __init__(self):
         self.cantcompra = 0   # Variable para almacenar la cantidad de tickets a comprar
@@ -18,7 +21,6 @@ class Ventas:
     def ventas(self, vendidas, noVendidas):
         mVendidas = MostrarVendidas()   # Instancia de la clase MostrarVendidas
         mNoVendidas = MostrarNoVendidas()   # Instancia de la clase MostrarNoVendidas
-        mnVendidas = MostrarNoVendidas()   # Instancia de la clase MostrarNoVendidas
         cobro = Cobro()   # Instancia de la clase Cobro
         ticketsventa = [None] * 225   # Lista para almacenar los tickets de venta
         condicion = True

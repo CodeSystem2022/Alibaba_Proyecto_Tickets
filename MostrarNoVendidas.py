@@ -13,10 +13,10 @@ class MostrarNoVendidas:
         pass
 
     def getMostrarNoVendidas(self, novendidas):
-        self.mostrarnovendidas(novendidas)
+        self.MostrarNoVendidas(novendidas)
 
     # Este método muestra en pantalla los tickets disponibles para comprar en puerta
-    def mostrarnovendidas(self, novendidas):
+    def MostrarNoVendidas(self, novendidas):
         pantallas = Pantallas()
 
         j = 0
