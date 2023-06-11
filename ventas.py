@@ -1,4 +1,5 @@
 from MostrarNoVendidas import MostrarNoVendidas
+import Cobro
 
 
 class Ventas:
