@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df8c1e6f-d786-4d64-857e-8895e65ff200" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Menu.py" afterDir="false" />
-    </list>
+    <list default="true" id="b9406ef2-c173-4bcc-aec4-f9ea73f54f29" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,10 +20,8 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2R4I1ePRtYhgX22JpEpnVGIIfKG" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2R5A5xGIetltRZFNJfsLjNkZzGu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,18 +30,37 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/Alibaba_Proyecto_Tickets"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Natalia/Desktop/repositorios/UTN/Alibaba_Proyecto_Tickets"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="df8c1e6f-d786-4d64-857e-8895e65ff200" name="Changes" comment="" />
-      <created>1686502713150</created>
+      <changelist id="b9406ef2-c173-4bcc-aec4-f9ea73f54f29" name="Changes" comment="" />
+      <created>1686529390714</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1686502713150</updated>
+      <updated>1686529390714</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
