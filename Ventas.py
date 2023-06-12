@@ -1,6 +1,12 @@
 from MostrarNoVendidas import MostrarNoVendidas
-import Cobro
+from Cobro import Cobro
 
+"""
+Esta clase implementa un sistema de venta de tickets que permite al usuario seleccionar una zona
+y la cantidad de tickets que desea comprar. Los tickets vendidos se mueven de la lista de tickets no vendidos 
+a la lista de tickets vendidos, y se muestra el monto total de la venta. 
+El proceso de venta continúa hasta que el usuario decida salir del programa.
+"""
 
 class Ventas:
     def __init__(self):
@@ -20,7 +26,6 @@ class Ventas:
         self.ventas(vendidas, noVendidas)
 
     def ventas(self, vendidas, noVendidas):
-        mVendidas = MostrarVendidas()   # Instancia de la clase MostrarVendidas
         mNoVendidas = MostrarNoVendidas()   # Instancia de la clase MostrarNoVendidas
         cobro = Cobro()   # Instancia de la clase Cobro
         ticketsventa = [None] * 225   # Lista para almacenar los tickets de venta
@@ -60,4 +65,104 @@ class Ventas:
             print("                                                5.- Salir.")
             print("")
             zona = int(input("                                                Ingrese la zona donde desea vender: "))
+
             cantcompra = 0   # La variable "cantcompra" representa la cantidad de tickets que desea comprar.
+            while True:
+                # Condicional multiple para vender los tickets de acuerdo a la zona requerida
+                if zona == 1:
+                    cantcompra = int(input())
+                    # se almacena la cantidad de tickets disponibles de la zona requerida en la variable cantDisponible
+                    cantdisponible = contadorpalcoizquierdo
+                    # se verifica que la cantidad de entradas disponibles sea mayor a la requerida
+                    if cantdisponible >= cantcompra:
+                        # Este bucle permite la asignacion de entradas segun la cantidad requerida para venta.
+                        for l in range(cantcompra):
+                            venta = True
+                            for i in range(15):
+                                for j in range(4):
+                                    if not noVendidas[i][j] == "      " and venta:
+                                        # Cada vez que se vende una entrada se la mueva a la matriz de entradas vendidas
+                                        vendidas[i][j] = noVendidas[i][j]
+                                        ticketsventa[l] = noVendidas[i][j]
+                                        # el ticket vendido autmaticamente es reescrito con caracteres vacios dentro de la matriz de entradas no Vendidas
+                                        noVendidas[i][j] = "      "
+                                        venta = False
+                    cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
+                elif zona == 2:
+                    cantcompra = int(input())
+                    # se almacena la cantidad de tickets disponibles de la zona requerida en la variable cantDisponible
+                    cantdisponible = contadorreservados
+                    # se verifica que la cantidad de entradas disponibles sea mayor a la requerida
+                    if cantdisponible >= cantcompra:
+                        # Este bucle permite la asignacion de entradas segun la cantidad requerida para venta.
+                        for l in range(cantcompra):
+                            venta = True
+                            for i in range(15):
+                                for j in range(4, 6):
+                                    if not noVendidas[i][j] == "      " and venta:
+                                        # Cada vez que se vende una entrada se la mueva a la matriz de entradas vendidas
+                                        vendidas[i][j] = noVendidas[i][j]
+                                        ticketsventa[l] = noVendidas[i][j]
+                                        # el ticket vendido automaticamente es reescrito con caracteres vacios dentro de la matriz de entradas no Vendidas
+                                        noVendidas[i][j] = "      "
+                                        venta = False
+                    cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
+                elif zona == 3:
+                    cantcompra = int(input())
+                    # se almacena la cantidad de tickets disponibles de la zona requerida en la variable cantDisponible
+                    cantdisponible = contadorvip
+                    # se verifica que la cantidad de entradas disponibles sea mayor a la requerida
+                    if cantdisponible >= cantcompra:
+                        # Este bucle permite la asignacion de entradas segun la cantidad requerida para venta.
+                        for l in range(cantcompra):
+                            venta = True
+                            for i in range(15):
+                                for j in range(6, 10):
+                                    if not noVendidas[i][j] == "      " and venta:
+                                        # Cada vez que se vende una entrada se la mueva a la matriz de entradas vendidas
+                                        vendidas[i][j] = noVendidas[i][j]
+                                        ticketsventa[l] = noVendidas[i][j]
+                                        # el ticket vendido autmaticamente es reescrito con caracteres vacios dentro de la matriz de entradas no Vendidas
+                                        noVendidas[i][j] = "      "
+                                        venta = False
+                    cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
+                elif zona == 4:
+                    cantcompra = int(input())
+                    # se almacena la cantidad de tickets disponibles de la zona requerida en la variable cantDisponible
+                    cantdisponible = contadorpalcoderecho
+                    # se verifica que la cantidad de entradas disponibles sea mayor a la requerida
+                    if cantdisponible >= cantcompra:
+                        # Este bucle permite la asignacion de entradas segun la cantidad requerida para venta.
+                        for l in range(cantcompra):
+                            venta = True
+                            for i in range(15):
+                                for j in range(10, 15):
+                                    if not noVendidas[i][j] == "      " and venta:
+                                        # Cada vez que se vende una entrada se la mueva a la matriz de entradas vendidas
+                                        vendidas[i][j] = noVendidas[i][j]
+                                        ticketsventa[l] = noVendidas[i][j]
+                                        # el ticket vendido autmaticamente es reescrito con caracteres vacios dentro de la matriz de entradas no Vendidas
+                                        noVendidas[i][j] = "      "
+                                        venta = False
+                    cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
+                elif zona == 5:
+                    opcion = 2
+                    condicion = False
+                else:
+                    limpiar.limpiarPantalla()
+                if zona == 1 or zona == 2 or zona == 3 or zona == 4 or zona == 5:
+                    break
+            opcion = 0
+            while opcion != 1 and opcion != 2:
+                print("")
+                print("                                                      ¿Que desea hacer?")
+                print("                                                      1. Seguir vendiendo.")
+                print("                                                      2. Regresar al menu principal.")
+                print("")
+                opcion = int(input("                                                      Opcion: "))
+                if opcion == 1:
+                    condicion = True
+                # Esta condicion permite regresar al menu principal
+                if opcion == 2:
+                    condicion = False
+                    limpiar.limpiarPantalla()
