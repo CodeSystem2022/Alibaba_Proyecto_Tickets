@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9406ef2-c173-4bcc-aec4-f9ea73f54f29" name="Changes" comment="" />
+    <list default="true" id="b9406ef2-c173-4bcc-aec4-f9ea73f54f29" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/EntradasVendidasNoVendidas.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Natalia/Desktop/repositorios/UTN/Alibaba_Proyecto_Tickets"
+    "last_opened_file_path": "C:/Users/pc/Alibaba_Proyecto_Tickets"
   },
   "keyToStringList": {
     "GitStage.ChangesTree.GroupingKeys": [
