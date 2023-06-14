@@ -1,32 +1,24 @@
 <div align="center">
  
-# Proyecto Integrador Checking y Venta Tickets en Python
+# Proyecto Integrador 
+# Checking y Venta Tickets en Python
 
  ![Tickets Python](https://github.com/CodeSystem2022/Alibaba_Proyecto_Tickets/assets/111541137/f223eb9f-8a5c-4aea-9777-77302b8695ae)
 
 
 
+## El programa está desarrollado en el Lenguaje de Programación #Python, por el Grupo Alí Babá y los Programadores, aplicando lo aprendido en la Tecnicatura Universitaria en Programación de la Universidad Tecnológica Nacional-Facultad Regional San Rafael.
 
+#### El mismo fue ideado para la recepción de participantes de un Concierto, donde el verificador ingresa a la aplicación mediante un Login para luego Verificar las entradas ya vendidas o bien vender nuevas entradas.
 
-<h2>
- El programa está desarrollado en el Lenguaje de Programación #Python, por el Grupo Alí Babá y los Programadores. Aplicando lo aprendido en la Tecnicatura Universitaria en Programación de la UTN Facultad Regional San Rafael. 
- </h2>
- 
- <h4>
- El mismo fue ideado para la recepción de participantes de un Concierto, donde el verificador ingresa a la aplicación mediante un Login para luego Verificar las entradas ya vendidas o bien vender nuevas entradas.
-
-Las Primeras versiones, fueron realizadas en #Pseint , debido a que fue el pseudolenguaje que aprendimos como Introducción a la Programación, luego lo replicamos en #Java, actualmente lo mejoramos al proyecto, pasándolo a #Python.
- </h4>
- 
+Las Primeras versiones, fueron realizadas en #Pseint , debido a que fue el pseudolenguaje que aprendimos como Introducción a la Programación, luego lo replicamos en #Java, actualmente lo mejoramos al proyecto, pasándolo a #Python y complementándolo con un robusto sistema de gestión de bases de datos relacional orientado a objetos y de código abierto, como lo es PostgreSQL. 
 
  
  ## Manual de usuario
 
 - Al ejecutar el programa  aparecerá en pantalla el menú para ingresar usuario y contraseña. Luego de colocar las mismas de manera correcta podrá acceder al menú general del programa.
          ** Tenga en cuenta que de ingresar de manera incorrecta el usuario y contraseña no podrá acceder al sistema y se mostrará el siguiente cuadro de texto “Usuario o contraseña incorrecta verifique sus datos”.
-      
-
-      
+            
 - Al acceder al menú principal el programa dispone de las siguientes 3 opciones:
 1.1. Verificación de ticket.
 2.2 . Venta de tickets
@@ -69,6 +61,35 @@ Con GitHub, aprovechamos todos los beneficios de la metodología Scrum para gest
 |                                                                                                                                                                             **Jorge Huamán**                                                                                                                                                                             |                                                                                                                                                                               **Sebastián Lerotich**                                                                                                                                                                                |                                                                                                                                                                                           **Juan Murúa**                                                                                                                                                                                           |
 | <a href="https://github.com/Jorge-Huaman" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>  <a href="https://www.linkedin.com/in/huamanperez/" target="_blank"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | <a href="https://github.com/SebaLerotich" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>  <a href="https://www.linkedin.com/in/sebasti%C3%A1n-lerotich-5a6955230" target="_blank"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> | <a href="https://github.com/JuanIgnaMurua" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>  <a href="https://www.linkedin.com/in/juan-ignacio-mur%C3%BAa-7333641a8/" target="_blank"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> ||
 
-
-
-
+ 
+ 
+ <div align="center">
+ 
+# Desde Argentina, al Mundo.
+ 
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "ID": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+           [-73.582687, -55.051582],
+            [-52.628424, -55.051582],
+            [-52.628424, -21.781875],
+            [-73.582687, -21.781875],
+            [-73.582687, -55.051582]
+          ]
+        ]
+      }
+    }
+  ]
+}
+```
