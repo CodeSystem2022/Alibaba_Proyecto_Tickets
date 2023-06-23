@@ -1,28 +1,44 @@
 '''import logging'''
 
 
-class Pantallas:
-    def __init__(self):
-        self.intentos = 0
-        self.usuario = ""
-        self.contrasenia = ""
-        self.validacion = False
-        self.entrada = input
+class Pantalla:
 
-    def setIntentos(self, intentos):
-        self.intentos = intentos
+    def __init__(self, intentos, usuario, contrasenia,validacion):
+        self._intentos = intentos
+        self._usuario = usuario
+        self._contrasenia = contrasenia
+        self._validacion = validacion
 
-    def setUsuario(self, usuario):
-        self.usuario = usuario
+    @property
+    def intentos(self):
+        return self._intentos
 
-    def setContrasenia(self, contrasenia):
-        self.contrasenia = contrasenia
+    @intentos.setter
+    def intentos(self, intentos):
+        self._intentos = intentos
 
-    def getValidacion(self):
-        self.ingresousuario()
-        return self.validacion
+    @property
+    def usuario(self):
+        return self._usuario
 
-    def titulo(self):
+    @usuario.setter
+    def usuario(self, usuario):
+        self._usuario = usuario
+
+    @property
+    def contrasenia(self):
+        return self._contrasenia
+
+    @contrasenia.setter
+    def contrasenia(self, contrasenia):
+        self._contrasenia = contrasenia
+
+    @property
+    def validacion(self):
+        self._ingresousuario()
+        return self._validacion
+
+    def titulo():
         print("")
         print("                                                 *=====================================*")
         print("                                                 *  E N T R A D A S   V E N D I D A S  *")
@@ -35,10 +51,10 @@ class Pantallas:
         print("           --__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--")
         print("           __--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__")
         print("")
-        print(" ||---*--- PALCO IZQUIERDO ---*---||       * RESERVADO *  " + " ||*--*--*--* ZONA   V I P *--*--*--*|| " + "  ||  ---**---   PALCO   DERECHO    ---**---  ||")
+        print(" ||----*----  PALCO IZQUIERDO  ----*----||   || * RESERVADO * || " + "     ||*--*--*--* ZONA   V I P *--*--*--*|| " + "      ||  ---**---   PALCO   DERECHO    ---**---  ||")
         print("")
 
-    def ingresousuario(self):
+    def _ingresousuario(self):
         print("")
         print("        --__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--")
         print("        __--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__")
@@ -61,35 +77,32 @@ class Pantallas:
         print("")
         print("")
 
-        intentos = Pantallas.setIntentos(intentos)
-
         '''Este bucle nos mantiene en la pantalla principal hasta que se ingrese el usuario y contraseña correctos.'''
         while True:
-            print(" Escriba un Usuario: ")
-            ingUsuario = input()
-            print(" Escriba una Contraseña: ")
-            ingContrasenia = input()
-            intentos = intentos - 1
-            if ingUsuario == Pantallas.usuario and ingContrasenia == Pantallas.contrasenia:
-            
+            ingUsuario = input("                                     Escriba un Usuario: ")
+            ingContrasenia = input("                                     Escriba una Contraseña: ")
+            ingUsuario = "alibaba"
+            ingContrasenia = "alibaba123"
+            self._intentos = self._intentos - 1
+            if ingUsuario == self.usuario and ingContrasenia == self.contrasenia:
                 try:
                     print("")
-                    print(" B I E N V E N I D O  A  S U  C A M P U S ")
-                    validacion = True
+                    print("                                       B I E N V E N I D O  A  S U  C A M P U S ")
+                    self._validacion = True
                 except Exception as ex:
                     print("Error: ", ex)
-                else:
-                    print("")
-                    print(" Usuario o contraseña INCORRECTA, ¡VERIFIQUE SUS DATOS! ")
-                    print("")
-                    print(" Le restan " + str(intentos) + " intentos")
-                    print("")
+            else:
+                print("")
+                print("                                     Usuario o contraseña INCORRECTA, ¡VERIFIQUE SUS DATOS! ")
+                print("")
+                print("                                     Le restan " + str(self._intentos) + " intentos")
+                print("")
     
-            if validacion or intentos == 0:
+            if self._validacion == True or self._intentos == 0:
                 break
 
 
-    def diseniomenu():
+    def diseniomenu(self):
         # limpiar.limpiarPantalla()
         print("")
         print("")
@@ -106,7 +119,7 @@ class Pantallas:
         print("                                     3.- Salir.")
 
 
-    def mensajesalida():
+    def mensajesalida(self):
         print("")
         print("        --__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--")
         print("        __--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__")
@@ -122,9 +135,9 @@ class Pantallas:
         print("        --__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--")
         print("        __--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__")
         print("")
-        print("                        |     __   __       __   __   __     __   __    __   __ __  __    __    __    __  __   __")
+        print("                        |    __   __       __   __   __    __   __    __   __ __  __    __    __    __  __   __")
         print("                        |   /  \\ ( _      |__) |__) /  \\  / _  |__)   /\\  |\\/|  /\\  |  \\ /  \\ |__) |_  (_  ")
-        print("                   \\/  |__ \\__/  __)     |    | \\ \\__/ \\__) | \\  /--\\ |   | /--\\ |__// \\__/ | \\ |__ __) ")
+        print("                    \\/  |__ \\__/  __)     |    | \\  \\__/  \\__) |  \\  /--\\ |  | /--\\ |__//\\__/ |  \\ |__ __) ")
         print("                    /                                                                                     ")
         print("")
         print("                                                               [N]")
@@ -133,10 +146,15 @@ class Pantallas:
         print("                                                [B]      [R]    ")
         print("                                                [R]      [G] ")
         print("                                                [I]   [D][E][N][I][S][E]   ")
-        print("                                          [A][L][E][X]            [E] ")
-        print("                                          [N]   [L]               [B]  ")
-        print("                                          [G]                  [M][A][T][I]")
-        print("                                          [E]                     [S]   ")
-        print("                                          [L]")
+        print("                                          [A][N][G][E][L]         [E] ")
+        print("                                                [L]               [B]  ")
+        print("                                                               [M][A][T][I]")
+        print("                                                                  [S]   ")
         print("")
         print("")
+
+if __name__ == '__main__':
+    Disenios = Pantalla(3,"alibaba", "alibaba123", False)
+    Disenios.diseniomenu()
+    Disenios.mensajesalida()
+    Disenios.validacion

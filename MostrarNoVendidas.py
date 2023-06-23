@@ -7,6 +7,8 @@ Los tickets se muestran en filas y columnas, y se aplican ajustes en la cantidad
 de la longitud del contenido de cada ticket. Además, la clase hace uso de la clase Pantallas para mostrar un título
 en la pantalla antes de mostrar los tickets.
 """
+from Pantalla import Pantalla
+
 
 class MostrarNoVendidas:
     def __init__(self):
@@ -17,10 +19,9 @@ class MostrarNoVendidas:
 
     # Este método muestra en pantalla los tickets disponibles para comprar en puerta
     def MostrarNoVendidas(self, novendidas):
-        pantallas = Pantallas()
 
         j = 0
-        pantallas.titulo()  # Llama al método "titulo" de la clase "Pantallas"
+        Pantalla.titulo()  # Llama al método "titulo" de la clase "Pantallas"
         for i in range(15):
             if j <= 15:
                 if len(novendidas[i][0]) <= 8:

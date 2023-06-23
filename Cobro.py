@@ -9,8 +9,8 @@ class Cobro:
         self._ticketsventa = ticketsventa
         self._zona = zona
 
-    def getCobroTicket(self, cantcompra, cantdisponible, ticketsventa, zona):
-        self.cobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
+    def getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona):
+        Cobro.cobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
 
     def cobroTicket(cantcompra, cantdisponible, ticketsventa, zona):
         l = 0
@@ -23,21 +23,21 @@ class Cobro:
 
         # si la cantidad requerida para la compra es mayor a los tickets disponibles no se procede a la venta.
         if cantcompra > cantdisponible:
-            print("El número de entradas solicitadas supera al número de entradas disponibles.")
+            print("                                                El número de entradas solicitadas supera al número de entradas disponibles.")
         else:
             # si la venta es correcta, se mostraria en pantalla los tickets vendidos para la zona correspondiente.
             if zona == 1:
-                print("TICKETS VENDIDOS EN PALCO IZQUIERDO: ")
+                print("                                                TICKETS VENDIDOS EN PALCO IZQUIERDO: ", end="")
             elif zona == 2:
-                print("TICKETS VENDIDOS EN ZONA DE RESERVADOS: ")
+                print("                                                TICKETS VENDIDOS EN ZONA DE RESERVADOS: ", end="")
             elif zona == 3:
-                print("TICKETS VENDIDOS EN ZONA VIP: ")
+                print("                                                TICKETS VENDIDOS EN ZONA VIP: ", end="")
             elif zona == 4:
-                print("TICKETS VENDIDOS EN PALCO DERECHO: ")
+                print("                                                TICKETS VENDIDOS EN PALCO DERECHO: ", end="")
 
             # Este bucle muestra las entradas asignadas en la última venta listas para facturar.
             for l in range(cantcompra):
-                print("[" + ticketsventa[l] + "] ")
+                print("[" + ticketsventa[l] + "] ", end="")
             print("")
 
             # Valor pre definido de la entrada
@@ -46,29 +46,29 @@ class Cobro:
             # subtotal
             subtotal = valorentrada * cantcompra
             print("")
-            print("                     *=============================*")
-            print("                      *   F A C T U R A C I O N   *")
-            print("                     *=============================*")
-            print("                Facturar la siguiente cantidad: " + str(cantcompra) + " Entradas")
+            print("                                                *=============================*")
+            print("                                                 *   F A C T U R A C I O N   *")
+            print("                                                *=============================*")
+            print("                                                Facturar la siguiente cantidad: " + str(cantcompra) + " Entradas")
             while True:
-                strDescuento = input("                Ingrese el % de descuento: ")
+                strDescuento = input("                                                Ingrese el % de descuento: ")
                 if strDescuento.isnumeric():
                     descuento = float(strDescuento)
                     if descuento >= 0 and descuento <= 100:
                         break
                     else:
-                        print("                Debe ingresar un valor entre 0 y 100!!! ")
+                        print("                                                Debe ingresar un valor entre 0 y 100!!! ")
                         print("")
                 else:
-                    print("                Debe ingresar un valor entre 0 y 100!!! ")
+                    print("                                                Debe ingresar un valor entre 0 y 100!!! ")
                     print("")
 
             # descuento a aplicar
             totaldesc = (subtotal * descuento) / 100
             totalcompra = subtotal - totaldesc
-            print("                --------------------------------")
-            print("                Importe  total               : " + str(subtotal))
-            print("                Descuento realizado          : " + str(totaldesc))
-            print("                Total a pagar                : " + str(totalcompra))
+            print("                                                --------------------------------")
+            print("                                                Importe  total               : " + str(subtotal))
+            print("                                                Descuento realizado          : " + str(totaldesc))
+            print("                                                Total a pagar                : " + str(totalcompra))
             print("")
 

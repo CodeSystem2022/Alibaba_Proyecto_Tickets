@@ -1,9 +1,8 @@
-from random import random
-
-from Pantalla import Pantallas
+import random
 
 
 class EntradasVendidasNoVendidas:
+
     def __init__(self):
         self.novendidas = None
         self.vendidas = None
@@ -21,24 +20,25 @@ class EntradasVendidasNoVendidas:
         self.vendidas = vendidas
 
     def entradas_vendidas(self, matriz):
-        vendidas = [['      ' for _ in range(15)] for _ in range(15)]
+        vendidas = [['       ' for _ in range(15)] for _ in range(15)]
         self.set_vendidas(vendidas)
         for i in range(15):
             for j in range(15):
                 simulador = random.randint(0, 30)
+
                 if simulador < 29:
                     vendidas[i][j] = matriz[i][j]
                 else:
-                    vendidas[i][j] = '      '
+                    vendidas[i][j] = '       '
         return vendidas
 
     def entradas_no_vendidas(self, matriz):
-        novendidas = [['      ' for _ in range(15)] for _ in range(15)]
+        novendidas = [['       ' for _ in range(15)] for _ in range(15)]
         self.set_novendidas(novendidas)
         for i in range(15):
             for j in range(15):
-                if self.vendidas[i][j] == '      ':
+                if self.vendidas[i][j] == '       ':
                     novendidas[i][j] = matriz[i][j]
                 else:
-                    novendidas[i][j] = '      '
+                    novendidas[i][j] = '       '
         return novendidas

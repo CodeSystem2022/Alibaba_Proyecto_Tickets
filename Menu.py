@@ -1,41 +1,49 @@
-def menu(vendidas, novendidas):
-    opcion = ""
-    salir = False
-    while not salir:
-        disenio_menu()
-        print("")
-        opcion = input("                                        Elija una opción:")
-        print("")
-        if opcion == "1":
-            print("")  # No hay forma directa de borrar la consola en Python
-            # Se invoca a la función mostrar_vendidas y se muestra la matriz con las entradas vendidas
-            mostrar_vendidas(vendidas)
-            # Se invoca a la función de registro y se realiza el checking de entradas
-            registro(vendidas, novendidas)
-        if opcion == "2":
-            # Se invoca a la función de ventas
-            ventas(novendidas, vendidas)
-        if opcion == "3":
-            print("                                        3.- Salir.")
-            salir = True
-            mensaje_salida()
 
-def disenio_menu():
-    # Implementa el diseño del menú aquí
-    pass
+from MostrarNoVendidas import MostrarNoVendidas
+from MostrarVendidas import MostrarVendidas
+from Pantalla import Pantalla
+from Registro import Registro
+from Ventas import Ventas
 
-def mostrar_vendidas(vendidas):
-    # Implementa la lógica para mostrar las entradas vendidas aquí
-    pass
+class Menu:
 
-def registro(vendidas, novendidas):
-    # Implementa la lógica para el registro de entradas aquí
-    pass
+    def __init__(self):
+        self._opcion = ""
+        self._salir = False
 
-def ventas(novendidas, vendidas):
-    # Implementa la lógica para las ventas aquí
-    pass
+    def menu(self, vendidas, novendidas):
 
-def mensaje_salida():
-    # Implementa el mensaje de salida aquí
-    pass
+        while not self._salir:
+            Pantalla.diseniomenu(self)
+            print("")
+            self._opcion = input("                                        Elija una opción:")
+            print("")
+            if self._opcion == "1":
+                print("")
+                MostrarVendidas.getMostrarVendidas(vendidas)
+                Registro.registro(self, vendidas, novendidas)
+            elif self._opcion == "2":
+                Ventas.getVentas(vendidas, novendidas)
+            elif self._opcion == "3":
+                Pantalla.mensajesalida(self)
+                self._salir = True
+
+    def disenio_menu(self):
+        # Implementa el diseño del menú aquí
+        pass
+
+    def mostrar_vendidas(vendidas):
+        # Implementa la lógica para mostrar las entradas vendidas aquí
+        pass
+
+    def registro(vendidas, novendidas):
+        # Implementa la lógica para el registro de entradas aquí
+        pass
+
+    def ventas(novendidas, vendidas):
+        # Implementa la lógica para las ventas aquí
+        pass
+
+    def mensaje_salida(self):
+        # Implementa el mensaje de salida aquí
+        pass

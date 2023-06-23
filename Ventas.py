@@ -1,4 +1,4 @@
-from LimpiarPantalla import LimpiarPantalla
+# from LimpiarPantalla import LimpiarPantalla
 from MostrarNoVendidas import MostrarNoVendidas
 from Cobro import Cobro
 
@@ -23,18 +23,18 @@ class Ventas:
         self.venta = False   # Variable para controlar si se realizó una venta
         self.zona = 0   # Variable para almacenar la zona seleccionada por el usuario
 
-    def getVentas(self, vendidas, noVendidas):
-        self.ventas(vendidas, noVendidas)
+    def getVentas(vendidas, noVendidas):
+        Ventas.ventas(vendidas, noVendidas)
 
-    def ventas(self, vendidas, noVendidas):
+    def ventas(vendidas, noVendidas):
         mNoVendidas = MostrarNoVendidas()   # Instancia de la clase MostrarNoVendidas
-        cobro = Cobro()   # Instancia de la clase Cobro
+        # cobro = Cobro.getCobroTicket()   # Instancia de la clase Cobro
         ticketsventa = [None] * 225   # Lista para almacenar los tickets de venta
         condicion = True
 
         while condicion:
             opcion = 0
-            limpiar = LimpiarPantalla()   # Instancia de la clase LimpiarPantalla
+            # limpiar = LimpiarPantalla()   # Instancia de la clase LimpiarPantalla
             mNoVendidas.getMostrarNoVendidas(noVendidas)   # Llama al método getMostrarNoVendidas de la instancia mNoVendidas
             contadorpalcoizquierdo = 0
             contadorreservados = 0
@@ -43,7 +43,7 @@ class Ventas:
 
             for i in range(15):
                 for j in range(15):
-                    if noVendidas[i][j] != "      ":
+                    if noVendidas[i][j] != "       ":
                         if j <= 3:
                             contadorpalcoizquierdo += 1  # Incrementa el contador de tickets en la zona de Palco izquierdo
                         elif j >= 4 and j <= 5:
@@ -62,7 +62,7 @@ class Ventas:
             print("                                                1.- Palco izquierdo        : " + str(contadorpalcoizquierdo))
             print("                                                2.- Zona reservada         : " + str(contadorreservados))
             print("                                                3.- Zona vip               : " + str(contadorvip))
-            print("                                                 4.- Palco derecho          : " + str(contadorpalcoderecho))
+            print("                                                4.- Palco derecho          : " + str(contadorpalcoderecho))
             print("                                                5.- Salir.")
             print("")
             zona = int(input("                                                Ingrese la zona donde desea vender: "))
@@ -71,7 +71,8 @@ class Ventas:
             while True:
                 # Condicional multiple para vender los tickets de acuerdo a la zona requerida
                 if zona == 1:
-                    cantcompra = int(input())
+                    cantcompra = int(input(
+                        "                                                Ingrese la cantidad de tickets que desea vender: "))
                     # se almacena la cantidad de tickets disponibles de la zona requerida en la variable cantDisponible
                     cantdisponible = contadorpalcoizquierdo
                     # se verifica que la cantidad de entradas disponibles sea mayor a la requerida
@@ -81,16 +82,17 @@ class Ventas:
                             venta = True
                             for i in range(15):
                                 for j in range(4):
-                                    if not noVendidas[i][j] == "      " and venta:
+                                    if not noVendidas[i][j] == "       " and venta:
                                         # Cada vez que se vende una entrada se la mueva a la matriz de entradas vendidas
                                         vendidas[i][j] = noVendidas[i][j]
                                         ticketsventa[l] = noVendidas[i][j]
                                         # el ticket vendido autmaticamente es reescrito con caracteres vacios dentro de la matriz de entradas no Vendidas
-                                        noVendidas[i][j] = "      "
+                                        noVendidas[i][j] = "       "
                                         venta = False
-                    cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
+                    Cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
                 elif zona == 2:
-                    cantcompra = int(input())
+                    cantcompra = int(input(
+                        "                                                Ingrese la cantidad de tickets que desea vender: "))
                     # se almacena la cantidad de tickets disponibles de la zona requerida en la variable cantDisponible
                     cantdisponible = contadorreservados
                     # se verifica que la cantidad de entradas disponibles sea mayor a la requerida
@@ -100,16 +102,17 @@ class Ventas:
                             venta = True
                             for i in range(15):
                                 for j in range(4, 6):
-                                    if not noVendidas[i][j] == "      " and venta:
+                                    if not noVendidas[i][j] == "       " and venta:
                                         # Cada vez que se vende una entrada se la mueva a la matriz de entradas vendidas
                                         vendidas[i][j] = noVendidas[i][j]
                                         ticketsventa[l] = noVendidas[i][j]
                                         # el ticket vendido automaticamente es reescrito con caracteres vacios dentro de la matriz de entradas no Vendidas
-                                        noVendidas[i][j] = "      "
+                                        noVendidas[i][j] = "       "
                                         venta = False
-                    cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
+                    Cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
                 elif zona == 3:
-                    cantcompra = int(input())
+                    cantcompra = int(input(
+                        "                                                Ingrese la cantidad de tickets que desea vender: "))
                     # se almacena la cantidad de tickets disponibles de la zona requerida en la variable cantDisponible
                     cantdisponible = contadorvip
                     # se verifica que la cantidad de entradas disponibles sea mayor a la requerida
@@ -119,16 +122,17 @@ class Ventas:
                             venta = True
                             for i in range(15):
                                 for j in range(6, 10):
-                                    if not noVendidas[i][j] == "      " and venta:
+                                    if not noVendidas[i][j] == "       " and venta:
                                         # Cada vez que se vende una entrada se la mueva a la matriz de entradas vendidas
                                         vendidas[i][j] = noVendidas[i][j]
                                         ticketsventa[l] = noVendidas[i][j]
                                         # el ticket vendido autmaticamente es reescrito con caracteres vacios dentro de la matriz de entradas no Vendidas
-                                        noVendidas[i][j] = "      "
+                                        noVendidas[i][j] = "       "
                                         venta = False
-                    cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
+                    Cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
                 elif zona == 4:
-                    cantcompra = int(input())
+                    cantcompra = int(input(
+                        "                                                Ingrese la cantidad de tickets que desea vender: "))
                     # se almacena la cantidad de tickets disponibles de la zona requerida en la variable cantDisponible
                     cantdisponible = contadorpalcoderecho
                     # se verifica que la cantidad de entradas disponibles sea mayor a la requerida
@@ -138,19 +142,18 @@ class Ventas:
                             venta = True
                             for i in range(15):
                                 for j in range(10, 15):
-                                    if not noVendidas[i][j] == "      " and venta:
+                                    if not noVendidas[i][j] == "       " and venta:
                                         # Cada vez que se vende una entrada se la mueva a la matriz de entradas vendidas
                                         vendidas[i][j] = noVendidas[i][j]
                                         ticketsventa[l] = noVendidas[i][j]
                                         # el ticket vendido autmaticamente es reescrito con caracteres vacios dentro de la matriz de entradas no Vendidas
-                                        noVendidas[i][j] = "      "
+                                        noVendidas[i][j] = "       "
                                         venta = False
-                    cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
+                    Cobro.getCobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
                 elif zona == 5:
                     opcion = 2
                     condicion = False
-                else:
-                    limpiar.limpiarPantalla()
+
                 if zona == 1 or zona == 2 or zona == 3 or zona == 4 or zona == 5:
                     break
             opcion = 0
@@ -166,4 +169,4 @@ class Ventas:
                 # Esta condicion permite regresar al menu principal
                 if opcion == 2:
                     condicion = False
-                    limpiar.limpiarPantalla()
+                    # limpiar.limpiarPantalla()
