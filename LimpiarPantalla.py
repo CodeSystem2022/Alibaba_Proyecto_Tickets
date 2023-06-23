@@ -1,4 +1,5 @@
-import curses
+from curses import wrapper
+
 from curses import wrapper
 
 def LimpiarPantalla(stdscr):
