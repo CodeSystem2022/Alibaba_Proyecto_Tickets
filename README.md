@@ -1,9 +1,9 @@
 ![tickets1](https://github.com/CodeSystem2022/Alibaba_Proyecto_Tickets/assets/111541137/60bb319c-03cd-46e3-a008-e615ef451f06)
-![tickets1](https://github.com/CodeSystem2022/Alibaba_Proyecto_Tickets/assets/111541137/ab974a34-b0a2-4e1e-9c15-f93b961d71e0)
+
 
 <div align="center">
  
-# Proyecto Integrador en Python
+# PROYECTO  INTEGRADOR  EN  PYTHON
 
  ![Tickets Python](https://github.com/CodeSystem2022/Alibaba_Proyecto_Tickets/assets/111541137/f223eb9f-8a5c-4aea-9777-77302b8695ae)
 
