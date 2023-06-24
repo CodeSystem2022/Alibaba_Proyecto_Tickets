@@ -9,7 +9,7 @@ from GeneradorDeCodigos import EntradasTotales
 from Menu import Menu
 from Pantalla import Pantalla
 
-login = Pantalla(3, "alibaba", "alibvxcvxcvaba123", False)
+login = Pantalla(3, "alibaba", "alibaba123", False)
 menu = Menu()
 entradas = EntradasTotales()
 matriz = entradas.generar_matriz()
