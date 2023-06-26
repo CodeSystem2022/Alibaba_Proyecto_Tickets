@@ -8,8 +8,8 @@
  ![Tickets Python](https://github.com/CodeSystem2022/Alibaba_Proyecto_Tickets/assets/111541137/f223eb9f-8a5c-4aea-9777-77302b8695ae)
 
 
-
-
+<div align="left">
+ 
 ## El programa está desarrollado en el Lenguaje de Programación #Python, por el Grupo Alí Babá y los Programadores, aplicando lo aprendido en la Tecnicatura Universitaria en Programación de la Universidad Tecnológica Nacional-Facultad Regional San Rafael.
 
 #### El mismo fue ideado para la recepción de participantes de un Concierto, donde el verificador ingresa a la aplicación mediante un Login para luego Verificar las entradas ya vendidas o bien vender nuevas entradas.
@@ -42,8 +42,7 @@ Las Primeras versiones, fueron realizadas en #Pseint , debido a que fue el pseud
   ## Metodología de trabajo utilizada: SCRUM
 Con GitHub, aprovechamos todos los beneficios de la metodología Scrum para gestionar este proyecto de manera más eficiente y lograr resultados exitosos. Mediante una mejor colaboración y visibilidad, una mayor flexibilidad y adaptabilidad, la entrega incremental de valor, la retroalimentación constante y la mejora continua, así como la transparencia y trazabilidad, podemos optimizar nuestra forma de trabajo y obtener los mejores resultados posibles.
 
-###  `Los intengrantes del equipo son: ` 
-
+###  `Los intengrantes del equipo son: ` </div>
 
 |                                                                                                                                              <img src="https://i.postimg.cc/QtwHyH4q/Gabriel.jpg" alt="Photo Carolina Quevedo" height=150>                                                                                                                                              | <img src="https://i.postimg.cc/nhn7f92F/Matias.jpg" alt="Photo Matías Carballo" height=150>|                                                                                                                                              <img src="https://i.postimg.cc/gJ9CtpyZ/Angel.jpg" alt="Photo Ángel Escobar" height=150>                                                                                                                                               |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
