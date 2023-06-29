@@ -2,8 +2,13 @@
 # Esta clase se encarga de verificar la disponibilidad de tickets para vender.
 # Tambien se encarga de realizar la venta y mostrar la facturacion de la venta
 
+from Facturacion import Facturacion
+from Facturacion_dao import FacturacionDAO
+from Tickets import Tickets
+from Tickets_dao import TicketsDAO
+
 class Cobro:
-    def __init__(self, cantcompra, cantdisponible, ticketsventa, zona):
+    def __init__(self, cantcompra=None, cantdisponible=None, ticketsventa=None, zona=None):
         self._cantcompra = cantcompra
         self._cantdisponible = cantdisponible
         self._ticketsventa = ticketsventa
@@ -66,6 +71,11 @@ class Cobro:
             # descuento a aplicar
             totaldesc = (subtotal * descuento) / 100
             totalcompra = subtotal - totaldesc
+            factura1 = Facturacion(total_venta=totalcompra, cant_vendidas=cantcompra, descuento=descuento)
+            FacturacionDAO.insertar(factura1)
+            for i in range(cantcompra):
+                ticketAct = Tickets(ticket=ticketsventa[i], vendido=True)
+                TicketsDAO.actualizar(ticketAct)
             print("                                                --------------------------------")
             print("                                                Importe  total               : " + str(subtotal))
             print("                                                Descuento realizado          : " + str(totaldesc))
