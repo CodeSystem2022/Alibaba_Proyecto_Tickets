@@ -6,7 +6,8 @@ y realiza comprobaciones de longitud para determinar la impresión.
 También utiliza la clase Pantallas para mostrar un título antes de imprimir la matriz.
 '''
 from Pantalla import Pantalla
-
+from Tickets import Tickets
+from Tickets_dao import TicketsDAO
 
 class MostrarVendidas:
 
@@ -25,6 +26,12 @@ class MostrarVendidas:
                 print(" ", end=" ")
 
             for j in range(15):
+                existe = Tickets(ticket=vendidas[i][j])
+                if existe:
+                    ticketBus = TicketsDAO.seleccionarOne(existe)
+                    if ticketBus:
+                        if ticketBus[3]:
+                            vendidas[i][j] = vendidas[i][j] + "]"
                 if len(vendidas[i][j]) == 8:
                     print("[", end="")
                     print(vendidas[i][j] + "  ", end=" ")
@@ -37,6 +44,3 @@ class MostrarVendidas:
                     print(vendidas[i][j] + "    ", end="")
 
             print("")
-
-if __name__ == '__main__':
-    Pantalla.titulo()

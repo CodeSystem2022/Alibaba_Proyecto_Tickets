@@ -2,20 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9406ef2-c173-4bcc-aec4-f9ea73f54f29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Alibaba_Proyecto_Tickets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Alibaba_Proyecto_Tickets.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsultasSQL/Creacion_DB.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsultasSQL/Tabla_Facturacion.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsultasSQL/Tabla_Tickets.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsultasSQL/Tabla_Usuarios.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facturacion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facturacion_dao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tickets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tickets_dao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Usuario_dao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Usuarios.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conexion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cursor_del_pool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger_base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cobro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cobro.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EntradasVendidasNoVendidas.py" beforeDir="false" afterPath="$PROJECT_DIR$/EntradasVendidasNoVendidas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GeneradorDeCodigos.py" beforeDir="false" afterPath="$PROJECT_DIR$/GeneradorDeCodigos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LimpiarPantalla.py" beforeDir="false" afterPath="$PROJECT_DIR$/LimpiarPantalla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MostrarNoVendidas.py" beforeDir="false" afterPath="$PROJECT_DIR$/MostrarNoVendidas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MostrarVendidas.py" beforeDir="false" afterPath="$PROJECT_DIR$/MostrarVendidas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pantalla.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pantalla.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoTickets.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoTickets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Registro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ventas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ventas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creacion_facturacion.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/creacion_tickets.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/creacion_usuario.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generacion_base_de_datos.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,21 +41,34 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="tickets" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2R5A5xGIetltRZFNJfsLjNkZzGu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PaPeR\Documents\GitHub\Alibaba_Proyecto_Tickets\ConsultasSQL" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.ProyectoTickets">
     <configuration name="GeneradorDeCodigos" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -162,10 +186,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.ProyectoTickets" />
-        <item itemvalue="Python.GeneradorDeCodigos" />
         <item itemvalue="Python.MostrarVendidas" />
         <item itemvalue="Python.LimpiarPantalla" />
         <item itemvalue="Python.Pantalla" />
+        <item itemvalue="Python.GeneradorDeCodigos" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +204,9 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -190,5 +217,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -2,6 +2,8 @@
 #Se pide el ingreso manual del codigo a verificar, Si existe el codigo, 
 #aparecería una leyenda con codigo valido. Se sobreescribe dicha posicion con [].
 from MostrarVendidas import MostrarVendidas
+from Tickets import Tickets
+from Tickets_dao import TicketsDAO
 
 
 class Registro:
@@ -44,6 +46,7 @@ class Registro:
                         self.columna = j
                         #uando el ticket ingresado coincide con un elemento de la matriz, la variable codigoDet pasa a ser verdadera
                         self.codigodet = True
+                        TicketsDAO.actualizarVer(Tickets(ticket=vendidas[i][j], verificado=True))
                         vendidas[i][j] = vendidas[i][j] + "]"
                     if vendidas[i][j] == self.boletoregistrado:
                         #Esta condicion evalua si un ticket ya fue ingresado anteriormente. 

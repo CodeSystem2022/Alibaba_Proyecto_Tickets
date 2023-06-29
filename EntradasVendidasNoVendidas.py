@@ -1,4 +1,6 @@
 import random
+from Tickets import Tickets
+from Tickets_dao import TicketsDAO
 
 
 class EntradasVendidasNoVendidas:
@@ -22,14 +24,31 @@ class EntradasVendidasNoVendidas:
     def entradas_vendidas(self, matriz):
         vendidas = [['       ' for _ in range(15)] for _ in range(15)]
         self.set_vendidas(vendidas)
-        for i in range(15):
-            for j in range(15):
-                simulador = random.randint(0, 30)
+        todasVendidas = True
+        registros = TicketsDAO.seleccionarAll()
+        for ticket in registros:
+            if not ticket[2]:
+                todasVendidas = False
+        if todasVendidas:
+            for i in range(15):
+                for j in range(15):
+                    simulador = random.randint(0, 30)
 
-                if simulador < 29:
-                    vendidas[i][j] = matriz[i][j]
-                else:
-                    vendidas[i][j] = '       '
+                    if simulador < 29:
+                        vendidas[i][j] = matriz[i][j]
+                    else:
+                        vendidas[i][j] = '       '
+                        ticketAct = Tickets(ticket=matriz[i][j], vendido=False)
+                        TicketsDAO.actualizar(ticketAct)
+        else:
+            for i in range(15):
+                for j in range(15):
+                    ticketNum = Tickets(ticket=matriz[i][j])
+                    ticketBus = TicketsDAO.seleccionarOne(ticketNum)
+                    if ticketBus[2]:
+                        vendidas[i][j] = matriz[i][j]
+                    else:
+                        vendidas[i][j] = '       '
         return vendidas
 
     def entradas_no_vendidas(self, matriz):

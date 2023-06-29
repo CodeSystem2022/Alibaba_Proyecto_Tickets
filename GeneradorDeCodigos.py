@@ -1,5 +1,8 @@
 # esta clase se encarga de generar y almacenar todos los codigos alfanumericos de las entradas
 import random
+from Tickets import Tickets
+from Tickets_dao import TicketsDAO
+
 
 class EntradasTotales:
 
@@ -20,22 +23,28 @@ class EntradasTotales:
         return codigoConSeparador
 
     def generar_matriz(self):
-        for _ in range(15):
-            fila = []
+        existe = TicketsDAO.seleccionar()
+        lista = []
+        if not existe:
             for _ in range(15):
-                codigo = self.generar_codigo()
-                fila.append(codigo)
-            self._matriz.append(fila)
+                fila = []
+                for _ in range(15):
+                    codigo = self.generar_codigo()
+                    fila.append(codigo)
+                self._matriz.append(fila)
+            tickets = self._matriz
+            for i in range(15):
+                for j in range(15):
+                    ticketN = Tickets(ticket=tickets[i][j], vendido=True, verificado=False)
+                    TicketsDAO.insertar(ticketN)
+        else:
+            tickets = TicketsDAO.seleccionarAll()
+            for ticket in tickets:
+                lista.append(ticket[1])
+            self._matriz = [lista[i:i + 15] for i in range(0, len(lista), 15)]
         return self._matriz
 
     def imprimir_matriz(self):
         for fila in self._matriz:
             print(fila)
 
-if __name__ == '__main__':
-    # Crear una instancia de la clase EntradasTotales
-    entradas = EntradasTotales()
-    # Generar y mostrar la matriz de códigos
-    lista = entradas.generar_matriz()
-    print(lista[12][2])
-    entradas.imprimir_matriz()
