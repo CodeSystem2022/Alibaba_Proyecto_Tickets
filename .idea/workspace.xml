@@ -2,31 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9406ef2-c173-4bcc-aec4-f9ea73f54f29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ConsultasSQL/Creacion_DB.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsultasSQL/Tabla_Facturacion.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsultasSQL/Tabla_Tickets.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsultasSQL/Tabla_Usuarios.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Facturacion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Facturacion_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tickets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tickets_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Usuario_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Usuarios.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conexion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cursor_del_pool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cobro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cobro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntradasVendidasNoVendidas.py" beforeDir="false" afterPath="$PROJECT_DIR$/EntradasVendidasNoVendidas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeneradorDeCodigos.py" beforeDir="false" afterPath="$PROJECT_DIR$/GeneradorDeCodigos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MostrarVendidas.py" beforeDir="false" afterPath="$PROJECT_DIR$/MostrarVendidas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsultasSQL/Creacion_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ConsultasSQL/Creacion_DB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Facturacion_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/Facturacion_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LimpiarPantalla.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Pantalla.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pantalla.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoTickets.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoTickets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Registro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creacion_facturacion.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/creacion_tickets.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/creacion_usuario.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generacion_base_de_datos.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickets_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tickets_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datalog.log" beforeDir="false" afterPath="$PROJECT_DIR$/datalog.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -4,8 +4,8 @@ from Facturacion import Facturacion
 
 class FacturacionDAO:
     '''
-    DAO - Data Access Object para la tabla de usuario
-    CRUD - Create - Read - Update - Delete para la tabla de usuario
+    DAO - Data Access Object para la tabla de facturacion
+    CRUD - Create - Read - Update - Delete para la tabla de facturacion
     '''
     _SELECT_ALL = 'SELECT * FROM facturacion ORDER BY id_factura'
     _INSERTAR = 'INSERT INTO facturacion(total_venta, cant_vendidas, descuento) VALUES(%s, %s, %s)'

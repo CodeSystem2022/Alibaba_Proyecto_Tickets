@@ -8,6 +8,7 @@ from EntradasVendidasNoVendidas import EntradasVendidasNoVendidas
 from GeneradorDeCodigos import EntradasTotales
 from Menu import Menu
 from Pantalla import Pantalla
+import time
 
 login = Pantalla()
 menu = Menu()
@@ -17,11 +18,12 @@ escenario = EntradasVendidasNoVendidas()
 vendidas = escenario.get_vendidas(matriz)
 noVendidas = escenario.get_novendidas(matriz)
 
-
 if login.validacion:
+    Pantalla.LimpiarPantalla()
     menu.menu(vendidas, noVendidas)
 else:
     print("")
     print("                                     Se vencieron los intentos de inicio de sesion!!!")
     print("")
+    time.sleep(3)
     login.mensajesalida()
