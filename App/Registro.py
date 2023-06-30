@@ -1,9 +1,9 @@
 #Este subproceso sirve para realizar el checking 
 #Se pide el ingreso manual del codigo a verificar, Si existe el codigo, 
 #aparecería una leyenda con codigo valido. Se sobreescribe dicha posicion con [].
-from MostrarVendidas import MostrarVendidas
-from Tickets import Tickets
-from Tickets_dao import TicketsDAO
+from App.MostrarVendidas import MostrarVendidas
+from Database.Tickets import Tickets
+from Database.Tickets_dao import TicketsDAO
 
 
 class Registro:

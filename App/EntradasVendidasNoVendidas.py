@@ -1,6 +1,6 @@
 import random
-from Tickets import Tickets
-from Tickets_dao import TicketsDAO
+from Database.Tickets import Tickets
+from Database.Tickets_dao import TicketsDAO
 
 
 class EntradasVendidasNoVendidas:

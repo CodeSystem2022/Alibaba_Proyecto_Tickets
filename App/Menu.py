@@ -1,9 +1,8 @@
 
-from MostrarNoVendidas import MostrarNoVendidas
-from MostrarVendidas import MostrarVendidas
-from Pantalla import Pantalla
-from Registro import Registro
-from Ventas import Ventas
+from App.MostrarVendidas import MostrarVendidas
+from App.Pantalla import Pantalla
+from App.Registro import Registro
+from App.Ventas import Ventas
 
 class Menu:
 

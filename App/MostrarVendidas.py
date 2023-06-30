@@ -5,9 +5,9 @@ Utiliza un bucle for para iterar sobre los elementos de la matriz
 y realiza comprobaciones de longitud para determinar la impresión.
 También utiliza la clase Pantallas para mostrar un título antes de imprimir la matriz.
 '''
-from Pantalla import Pantalla
-from Tickets import Tickets
-from Tickets_dao import TicketsDAO
+from App.Pantalla import Pantalla
+from Database.Tickets import Tickets
+from Database.Tickets_dao import TicketsDAO
 
 class MostrarVendidas:
 

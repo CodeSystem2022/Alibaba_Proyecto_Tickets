@@ -1,7 +1,5 @@
-from Usuarios import Usuario
-from Usuario_dao import UsuarioDAO
+from Database.Usuario_dao import UsuarioDAO
 import os
-import time
 
 
 class Pantalla:

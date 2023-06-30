@@ -1,5 +1,5 @@
-from cursor_del_pool import CursorDelPool
-from Usuarios import Usuario
+from Database.cursor_del_pool import CursorDelPool
+from Database.Usuarios import Usuario
 
 
 class UsuarioDAO:

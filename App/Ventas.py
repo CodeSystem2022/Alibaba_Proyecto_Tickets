@@ -1,6 +1,6 @@
 # from LimpiarPantalla import LimpiarPantalla
-from MostrarNoVendidas import MostrarNoVendidas
-from Cobro import Cobro
+from App.MostrarNoVendidas import MostrarNoVendidas
+from App.Cobro import Cobro
 
 """
 Esta clase implementa un sistema de venta de tickets que permite al usuario seleccionar una zona
