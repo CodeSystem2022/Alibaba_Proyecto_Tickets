@@ -4,8 +4,8 @@ from Tickets import Tickets
 
 class TicketsDAO:
     '''
-    DAO - Data Access Object para la tabla de usuario
-    CRUD - Create - Read - Update - Delete para la tabla de usuario
+    DAO - Data Access Object para la tabla de ticket
+    CRUD - Create - Read - Update - Delete para la tabla de ticket
     '''
     _SELECT_ALL = 'SELECT * FROM tickets ORDER BY id_ticket'
     _SELECT_ALL_TKT = 'SELECT * FROM tickets WHERE id_ticket!=0 ORDER BY id_ticket ASC'
