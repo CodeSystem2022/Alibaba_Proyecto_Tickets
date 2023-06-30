@@ -1,5 +1,7 @@
 from Usuarios import Usuario
 from Usuario_dao import UsuarioDAO
+import os
+import time
 
 
 class Pantalla:
@@ -39,7 +41,14 @@ class Pantalla:
         self._ingresousuario()
         return self._validacion
 
+    def LimpiarPantalla():
+        command = 'clear'
+        if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+            command = 'cls'
+        os.system(command)
+
     def titulo():
+        Pantalla.LimpiarPantalla()
         print("")
         print("                                                 *=====================================*")
         print("                                                 *  E N T R A D A S   V E N D I D A S  *")
@@ -64,6 +73,7 @@ class Pantalla:
         print("")
 
     def _ingresousuario(self):
+        Pantalla.LimpiarPantalla()
         print("")
         print(
             "        --__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--")
@@ -126,7 +136,7 @@ class Pantalla:
                 break
 
     def diseniomenu(self):
-        # limpiar.limpiarPantalla()
+        Pantalla.LimpiarPantalla()
         print("")
         print("")
         print("")
@@ -144,6 +154,7 @@ class Pantalla:
         print("                                     3.- Salir.")
 
     def mensajesalida(self):
+        Pantalla.LimpiarPantalla()
         print("")
         print(
             "        --__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--")
