@@ -16,6 +16,9 @@
 
 Las Primeras versiones, fueron realizadas en #Pseint , debido a que fue el pseudolenguaje que aprendimos como Introducción a la Programación, luego lo replicamos en #Java, actualmente lo mejoramos al proyecto, pasándolo a #Python y complementándolo con un robusto sistema de gestión de bases de datos relacional orientado a objetos y de código abierto, como lo es PostgreSQL. 
 
+  ## Metodología de trabajo utilizada: SCRUM
+Con GitHub, aprovechamos todos los beneficios de la metodología Scrum para gestionar este proyecto de manera más eficiente y lograr resultados exitosos. Mediante una mejor colaboración y visibilidad, una mayor flexibilidad y adaptabilidad, la entrega incremental de valor, la retroalimentación constante y la mejora continua, así como la transparencia y trazabilidad, podemos optimizar nuestra forma de trabajo y obtener los mejores resultados posibles.
+
  
  ## Manual de usuario
 
@@ -27,20 +30,24 @@ Las Primeras versiones, fueron realizadas en #Pseint , debido a que fue el pseud
 2.2 . Venta de tickets
 3.3.  Salir.
 
+[![tickets-0.jpg](https://i.postimg.cc/B614z35d/tickets-0.jpg)](https://postimg.cc/zb5sL9cj)
+
 - Descripción de las opciones:
 
     ### 1. Verificación de ticket: 
     Esta función del programa permite conocer al usuario si el ticket ingresado es válido o no. Asimismo este menú muestra la cantidad de tickets a validar por el sistema distribuidos en los siguientes sectores: palco izquierdo, zona vip y palco derecho. Al momento de registrar un ticket válido aparecerá el siguiente texto: “El ticket es válido”  y más abajo mostrará la siguiente línea: ¿Desea seguir registrando boletos? Deberá escoger entre las opciones por teclado: 1. Si para continuar o 2. No para salir y regresar al menú principal.
 
+[![tickets3.jpg](https://i.postimg.cc/W3JkThc8/tickets3.jpg)](https://postimg.cc/Q9htqNtK)
+
   ### 2. Venta de tickets: 
   Esta opción permite realizar la venta de tickets , conocer la disponibilidad de los mismos según ubicación en el escenario: palco izquierdo, zona vip, palco derecho. Más abajo tendrá disponibles las opciones: 1. Ingresar las zonas donde se desea vender 2. Ingresar por teclado la cantidad de entradas que se desea vender . Al finalizar la venta de la misma se desplegará en la pantalla el siguiente menú***Facturacion***- En el menú de facturación podrá seleccionar lo siguiente: 1.Facturar la siguiente cantidad 2. Ingresar el porcentaje de descuento. Concluida la facturación, al final del menú se exhibe la opción de 1. Seguir vendiendo 2.Regresar al menú principal.
 
+[![tickets4.jpg](https://i.postimg.cc/fRryyDKr/tickets4.jpg)](https://postimg.cc/sM5s0FbY)
 
   ### 3. Salir: 
   Al seleccionar esta opción y tras un breve mensaje de despedida, se dará por finalizada la ejecución del programa.
- 
-  ## Metodología de trabajo utilizada: SCRUM
-Con GitHub, aprovechamos todos los beneficios de la metodología Scrum para gestionar este proyecto de manera más eficiente y lograr resultados exitosos. Mediante una mejor colaboración y visibilidad, una mayor flexibilidad y adaptabilidad, la entrega incremental de valor, la retroalimentación constante y la mejora continua, así como la transparencia y trazabilidad, podemos optimizar nuestra forma de trabajo y obtener los mejores resultados posibles.
+
+[![tickets5.jpg](https://i.postimg.cc/rpGpJxTv/tickets5.jpg)](https://postimg.cc/wtvHxt7V)
 
 ###  `Los intengrantes del equipo son: ` </div>
 
