@@ -4,6 +4,7 @@ from App.Pantalla import Pantalla
 from App.Registro import Registro
 from App.Ventas import Ventas
 
+
 class Menu:
 
     def __init__(self):
@@ -13,7 +14,7 @@ class Menu:
     def menu(self, vendidas, novendidas):
 
         while not self._salir:
-            Pantalla.diseniomenu(self)
+            Pantalla.diseniomenu()
             print("")
             self._opcion = input("                                        Elija una opción:")
             print("")
@@ -27,22 +28,3 @@ class Menu:
                 Pantalla.mensajesalida(self)
                 self._salir = True
 
-    def disenio_menu(self):
-        # Implementa el diseño del menú aquí
-        pass
-
-    def mostrar_vendidas(vendidas):
-        # Implementa la lógica para mostrar las entradas vendidas aquí
-        pass
-
-    def registro(vendidas, novendidas):
-        # Implementa la lógica para el registro de entradas aquí
-        pass
-
-    def ventas(novendidas, vendidas):
-        # Implementa la lógica para las ventas aquí
-        pass
-
-    def mensaje_salida(self):
-        # Implementa el mensaje de salida aquí
-        pass

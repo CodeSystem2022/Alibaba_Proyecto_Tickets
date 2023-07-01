@@ -1,4 +1,4 @@
-# from LimpiarPantalla import LimpiarPantalla
+
 from App.MostrarNoVendidas import MostrarNoVendidas
 from App.Cobro import Cobro
 
@@ -28,13 +28,11 @@ class Ventas:
 
     def ventas(vendidas, noVendidas):
         mNoVendidas = MostrarNoVendidas()   # Instancia de la clase MostrarNoVendidas
-        # cobro = Cobro.getCobroTicket()   # Instancia de la clase Cobro
         ticketsventa = [None] * 225   # Lista para almacenar los tickets de venta
         condicion = True
 
         while condicion:
             opcion = 0
-            # limpiar = LimpiarPantalla()   # Instancia de la clase LimpiarPantalla
             mNoVendidas.getMostrarNoVendidas(noVendidas)   # Llama al método getMostrarNoVendidas de la instancia mNoVendidas
             contadorpalcoizquierdo = 0
             contadorreservados = 0

@@ -8,6 +8,7 @@ from Database.Tickets_dao import TicketsDAO
 
 
 class Cobro:
+
     def __init__(self, cantcompra=None, cantdisponible=None, ticketsventa=None, zona=None):
         self._cantcompra = cantcompra
         self._cantdisponible = cantdisponible
@@ -18,12 +19,7 @@ class Cobro:
         Cobro.cobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
 
     def cobroTicket(cantcompra, cantdisponible, ticketsventa, zona):
-        l = 0
-        rta = False
-        subtotal = 0.0
-        totalcompra = 0.0
-        totaldesc = 0.0
-        valorentrada = 0
+
         print("")
 
         # si la cantidad requerida para la compra es mayor a los tickets disponibles no se procede a la venta.
