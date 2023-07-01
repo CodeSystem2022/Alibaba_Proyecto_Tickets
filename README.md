@@ -47,6 +47,14 @@ Con GitHub, aprovechamos todos los beneficios de la metodología Scrum para gest
   ### 3. Salir: 
   Al seleccionar esta opción y tras un breve mensaje de despedida, se dará por finalizada la ejecución del programa.
 
+  ### Video de demostración del programa: 
+  <h5><a href="https://vimeo.com/841376193" target="_blank" rel="noopener noreferrer"> Ver video </a></h5>
+
+  ### Video explicativo del código realizado por los integrantes del equipo:
+  <h5><a href="https://mega.nz/file/FIgTzaLK#ylRRVUFKdvUqFCcWpx5VOAH-zO85SQl7fSjhgqCQY8A" target="_blank" rel="noopener noreferrer"> Ver explicaciones </a></h5>
+
+  <br>
+
 [![tickets5.jpg](https://i.postimg.cc/rpGpJxTv/tickets5.jpg)](https://postimg.cc/wtvHxt7V)
 
 ###  `Los intengrantes del equipo son: ` </div>
