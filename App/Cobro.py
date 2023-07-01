@@ -1,13 +1,14 @@
 # Datos Curiosos: En python no existe la sentencia Switch por lo que lo reemplace por un elif, tampoco existe la sentencia Do While por lo que utilice un While True con Break's para finalizar
 
 
-from Facturacion import Facturacion
-from Facturacion_dao import FacturacionDAO
-from Tickets import Tickets
-from Tickets_dao import TicketsDAO
+from Database.Facturacion import Facturacion
+from Database.Facturacion_dao import FacturacionDAO
+from Database.Tickets import Tickets
+from Database.Tickets_dao import TicketsDAO
 
 
 class Cobro:
+
     def __init__(self, cantcompra=None, cantdisponible=None, ticketsventa=None, zona=None):
         self._cantcompra = cantcompra
         self._cantdisponible = cantdisponible
@@ -18,12 +19,7 @@ class Cobro:
         Cobro.cobroTicket(cantcompra, cantdisponible, ticketsventa, zona)
 
     def cobroTicket(cantcompra, cantdisponible, ticketsventa, zona):
-        l = 0
-        rta = False
-        subtotal = 0.0
-        totalcompra = 0.0
-        totaldesc = 0.0
-        valorentrada = 0
+
         print("")
 
         # si la cantidad requerida para la compra es mayor a los tickets disponibles no se procede a la venta.

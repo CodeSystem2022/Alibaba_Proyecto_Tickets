@@ -1,5 +1,5 @@
-from logger_base import log
-from conexion import Conexion
+from Logs.logger_base import log
+from Database.conexion import Conexion
 
 
 class CursorDelPool:

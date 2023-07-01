@@ -4,10 +4,10 @@ Desde esta clase se llaman a los metodos de otras clases
 para crear la matriz a la cual despues a traves de otra clase se le van a habilitar tickets
 Tambien va a ser la clase que llama y muestra el Log In y el Menu
 '''
-from EntradasVendidasNoVendidas import EntradasVendidasNoVendidas
-from GeneradorDeCodigos import EntradasTotales
-from Menu import Menu
-from Pantalla import Pantalla
+from App.EntradasVendidasNoVendidas import EntradasVendidasNoVendidas
+from App.GeneradorDeCodigos import EntradasTotales
+from App.Menu import Menu
+from App.Pantalla import Pantalla
 import time
 
 login = Pantalla()

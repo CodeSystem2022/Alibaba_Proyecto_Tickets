@@ -1,5 +1,5 @@
-from cursor_del_pool import CursorDelPool
-from Facturacion import Facturacion
+from Database.cursor_del_pool import CursorDelPool
+from Database.Facturacion import Facturacion
 
 
 class FacturacionDAO:
