@@ -1,7 +1,7 @@
 # esta clase se encarga de generar y almacenar todos los codigos alfanumericos de las entradas
 import random
-from Tickets import Tickets
-from Tickets_dao import TicketsDAO
+from Database.Tickets import Tickets
+from Database.Tickets_dao import TicketsDAO
 
 
 class EntradasTotales:
@@ -9,7 +9,7 @@ class EntradasTotales:
     def __init__(self):
         self._letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         self._numeros = "0123456789"
-        self._matriz = []  # Matriz para almacenar los códigos generados
+        self._matriz = []               # Matriz para almacenar los códigos generados
         self._codigosGenerados = set()  # Conjunto auxiliar para evitar la repetición de códigos
 
     def generar_codigo(self):

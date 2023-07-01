@@ -7,7 +7,7 @@ Los tickets se muestran en filas y columnas, y se aplican ajustes en la cantidad
 de la longitud del contenido de cada ticket. Además, la clase hace uso de la clase Pantallas para mostrar un título
 en la pantalla antes de mostrar los tickets.
 """
-from Pantalla import Pantalla
+from App.Pantalla import Pantalla
 
 
 class MostrarNoVendidas:

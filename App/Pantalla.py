@@ -1,7 +1,5 @@
-from Usuarios import Usuario
-from Usuario_dao import UsuarioDAO
+from Database.Usuario_dao import UsuarioDAO
 import os
-import time
 
 
 class Pantalla:
@@ -56,13 +54,13 @@ class Pantalla:
         print(
             "                             ______   _____   ______    ______    _   __    ___     ____     ____   ____ ")
         print(
-            "                            / ____/  / ___/  / ____/   / ____/   / | / /   /   |   / __\\   /  _/  / __ \\")
+            "                            / ____/  / ___/  / ____/   / ____/   / | / /   /   |   / __\\   /  _/  / __  \\")
         print(
-            "                           / __/     \\__\\ / /       / __/     /  |/ /   / /| |  / /_/ /   / /   / / / /")
+            "                           / __/     \\__\\   / /       / __/     /  |/ /   / /| |  / /_/ /   / /  / / /  /")
         print(
-            "                          / /___    ___/ / / /___    / /___    / /|  /   / ___ | / _, _/  _/ /   / /_/ / ")
+            "                          / /___    ___/ / / /___    / /___    / /|  /   / ___ | / _, _/  _/ /  / /_/  / ")
         print(
-            "                         /_____/   /____/  \\____/   /_____/  /_/ |_/   /_/  |_|/_/ |_|  /___/  \\____/  ")
+            "                         /_____/   /____/  \\____/   /_____/   /_/ |_/   /_/  |_|/_/ |_|  /___/  \\_____/  ")
         print(
             "           --__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--")
         print(
@@ -101,20 +99,18 @@ class Pantalla:
             "        __--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__")
         print("")
         print(
-            "                        |     __   __       __   __   __     __   __    __   __ __  __    __    __    __  __   __")
+            "                       |    __   __       __   __   __    __   __                   __   __   __   __  __")
         print(
-            "                        |   /  \\ ( _      |__) |__) /  \\  / _  |__)   /\\  |\\/|  /\\  |  \\ /  \\ |__) |_  (_  ")
+            "                       |   /  \\ ( _      |__) |__) /  \\  / _  |__)   /\\  |\\/|  /\\  |  \\ /  \\ |__) |_  (_  ")
         print(
-            "                   \\/  |__ \\__/  __)     |    | \\ \\__/ \\__) | \\  /--\\ |   | /--\\ |__// \\__/ | \\ |__ __) ")
+            "                   \\/  |__ \\__/  __)     |    | \\  \\__/  \\__) | \\   /--\\ |  | /--\\ |__/ \\__/ | \\  |__ __) ")
         print(
-            "                    /                                                                                     ")
+            "                   /                                                                                     ")
         print("")
         print("")
 
         '''Este bucle nos mantiene en la pantalla principal hasta que se ingrese el usuario y contraseña correctos.'''
         while True:
-            # ingUsuario = input("                                     Escriba un Usuario: ")
-            # ingContrasenia = input("                                     Escriba una Contraseña: ")
             dbUsuario = UsuarioDAO.seleccionarOne()
 
             self._intentos = self._intentos - 1
@@ -135,7 +131,7 @@ class Pantalla:
             if self._validacion == True or self._intentos == 0:
                 break
 
-    def diseniomenu(self):
+    def diseniomenu():
         Pantalla.LimpiarPantalla()
         print("")
         print("")
@@ -182,7 +178,7 @@ class Pantalla:
             "        __--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__--__")
         print("")
         print(
-            "                        |    __   __       __   __   __    __   __    __   __ __  __    __    __    __  __   __")
+            "                        |    __   __       __   __   __    __   __                   __   __   __   __  __")
         print(
             "                        |   /  \\ ( _      |__) |__) /  \\  / _  |__)   /\\  |\\/|  /\\  |  \\ /  \\ |__) |_  (_  ")
         print(
@@ -203,3 +199,6 @@ class Pantalla:
         print("")
         print("")
 
+
+if __name__ == '__main__':
+    Pantalla.diseniomenu()

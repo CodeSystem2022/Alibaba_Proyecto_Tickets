@@ -1,5 +1,5 @@
-from cursor_del_pool import CursorDelPool
-from Tickets import Tickets
+from Database.cursor_del_pool import CursorDelPool
+from Database.Tickets import Tickets
 
 
 class TicketsDAO:

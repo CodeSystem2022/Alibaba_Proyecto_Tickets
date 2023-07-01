@@ -1,0 +1,5 @@
+04:44:07 PM: ERROR [cursor_del_pool.py:18] Ocurrió una excepción, se hace rollback: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte <class 'UnicodeDecodeError'> <traceback object at 0x000001C7E5AAD2C0>
+04:47:03 PM: ERROR [cursor_del_pool.py:18] Ocurrió una excepción, se hace rollback: EOF when reading a line <class 'EOFError'> <traceback object at 0x000001339D62D7C0>
+04:54:45 PM: ERROR [cursor_del_pool.py:18] Ocurrió una excepción, se hace rollback: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte <class 'UnicodeDecodeError'> <traceback object at 0x0000025714234680>
+05:27:21 PM: ERROR [cursor_del_pool.py:18] Ocurrió una excepción, se hace rollback: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte <class 'UnicodeDecodeError'> <traceback object at 0x00000144965DDFC0>
+05:42:03 PM: ERROR [cursor_del_pool.py:18] Ocurrió una excepción, se hace rollback: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte <class 'UnicodeDecodeError'> <traceback object at 0x0000021B8AC6C6C0>
